@@ -44,8 +44,6 @@ Example Playbook
 Here is an example playbook that can readily wrap this role and still be fairly flexible.  You typically don't need to be this flexible on password source.
 
     - hosts: servers
-      vars_files:
-        - vars/private-idm.yml
       vars_prompt:
         - name: ipaserver_admin_password
           prompt: "What should the admin password be for IPA?"
@@ -66,4 +64,8 @@ GPLv2
 Author Information
 ------------------
 
+https://github.com/IronRainNL/ansible-ipaserver
+
+Original project
+----------------
 https://github.com/gregswift/ansible-freeipa
