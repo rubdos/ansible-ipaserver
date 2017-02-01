@@ -1,12 +1,12 @@
 ipaserver
 =========
 
-A simple, but fairly parameterized, role for setting up a FreeIPA server. Primarily tested on Fedora.
+A simple, but fairly parameterized, role for setting up a FreeIPA server. Primarily tested on CentOS.
 
 Requirements
 ------------
 
-Primarily tested and functional on Fedora, but open to others.
+Primarily tested and functional on CentOS, but open to others.
 
 Role Variables
 --------------
@@ -54,7 +54,7 @@ Here is an example playbook that can readily wrap this role and still be fairly 
           private: yes
           default: "{{ vault_ipaserver_dir_admin_password }}"
       roles:
-         - { role: gregswift.ipaserver }
+         - { role: IronRainNL.ipaserver }
 
 License
 -------
