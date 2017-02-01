@@ -66,6 +66,6 @@ Author Information
 
 https://github.com/IronRainNL/ansible-ipaserver
 
-Original project
+Original Project
 ----------------
 https://github.com/gregswift/ansible-freeipa
