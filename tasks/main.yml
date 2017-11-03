@@ -22,6 +22,17 @@
   with_items: ipaserver_packages
   when: ansible_distribution == "Fedora" and ansible_distribution_version|int > 21
 
+- name: Ensure ipa-server-dns is installed (yum)
+  yum: name=ipa-server-dns state=present
+  when: ipaserver_setup_dns and
+        (ansible_distribution == "CentOS" or
+        (ansible_distribution == "Fedora" and ansible_distribution_version|int <= 21))
+
+- name: Ensure ipa-server-dns is installed (dnf)
+  dnf: name=ipa-server-dns state=present
+  when: ipaserver_setup_dns and
+        ansible_distribution == "Fedora" and ansible_distribution_version|int > 21
+
 - name: Run the installer
   action: command
     {{ ipaserver_base_command }}
